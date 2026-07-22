@@ -95,8 +95,8 @@ otherwise-fine run.
 YouTube URL
     │  yt-dlp (+ cookies if needed)
     ▼
-source.mp4 ────────────────────────────────────┐
-    │  ffmpeg (extract audio)                  │ (kept for final remux)
+source.mp4 ─────────────────────────────────────┐
+    │  ffmpeg (extract audio)                   │ (kept for final remux)
     ▼                                           │
 audio.wav                                       │
     │  split into fixed-length chunks           │
@@ -108,7 +108,7 @@ audio_chunk_0.wav, audio_chunk_1.wav, ...       │
     ▼                                           │
 [Segment(start, end, english_text), ...]        │
     │  edge-tts, one call per segment,          │
-    │  retried on transient failure              │
+    │  retried on transient failure             │
     ▼                                           │
 raw English clips (variable length)             │
     │  ffmpeg atempo (stretch/compress          │
@@ -120,7 +120,7 @@ fitted clips, each = segment duration           │
     ▼                                           │
 dubbed_audio.wav (full-length track)            │
     │  ffmpeg -map (swap audio, copy video)     │
-    ▼◄───────────────────────────────────────────┘
+    ▼◄──────────────────────────────────────────┘
 out/dubbed.mp4
 ```
 
