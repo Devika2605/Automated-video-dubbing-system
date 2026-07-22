@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Working directory / intermediate files (source downloads, audio, clips, checkpoints)
+work/
+
+# Output videos (large binary files — don't belong in git; share via Drive instead)
+out/
+output/
+*.mp4
+*.mkv
+*.webm
+*.wav
+*.mp3
+
+# Sensitive: YouTube auth cookies — this is effectively your login session, never commit it
+youtube_cookies.txt
+*cookies*.txt
+
+# Editor/OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Hugging Face model cache, if it ever ends up inside the repo folder
+.cache/
